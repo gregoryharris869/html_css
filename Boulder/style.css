@@ -28,10 +28,10 @@ ol[role='list'] {
 }
 
 /* Set core body defaults */
-body {
+/* body {
   min-height: 100vh;
   line-height: 1.5;
-}
+} */
 
 /* Set shorter line heights on headings and interactive elements */
 h1, h2, h3, h4,
@@ -80,6 +80,14 @@ textarea:not([rows]) {
 /* Base styles for the Boulder theme */
 
 :root{
+  --clr-body: #92b4a7;
+  --clr-secondary: #f3f9d2;
+  --clr-primary: #ffe66d;
+  --clr-accent: #6ca6c1;
+  --footer-bgc: hsl(211, 52%, 28%);
+  --white: hsl(0, 0%, 100%);
+  --black: #313638;
+  --grey: hsl(0, 0%, 50%);
   --ff-base: "Work Sans", serif;
   --ff-accent: "Merriweather", serif;
   /* font size */
@@ -94,6 +102,80 @@ textarea:not([rows]) {
   --tracking-s: -0.075ch;
 }
 
-h1{
-  color : hsl(211, 41%, 47%);
+body {
+  font-size: var(--fs-400);
+  font-family: var(--ff-base);
+  background-color: var(--clr-body);
+  letter-spacing: var(--tracking-s);
+  color: var(--black);
+  line-height: 1.5;
+}
+
+
+header img {
+  margin: 0 auto;
+  
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: var(--tracking-s);
+  line-height: 1.1;
+  font-family: var(--ff-base);
+  max-width: 20ch;
+}
+
+h1 {
+  font-size: var(--fs-800);
+  color : var(--clr-primary);
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--fs-700);
+  color: var(--clr-secondary);
+}
+
+h3 {
+  font-size: var(--fs-600);
+  color:var(--clr-secondary);
+  
+}
+
+blockquote:not([class]),
+li,
+p {
+  max-width: 65ch;
+  font-family: var(--ff-accent);
+  
+  
+}
+
+
+
+blockquote:not([class]) {
+  font-family: var(--ff-accent);
+  font-size: var(--fs-300);
+}
+
+.wrapper {
+  width: min(100% - 3rem, 55ch);
+  margin-inline:auto
+}
+
+.flow > * + * {
+  margin-top: 1em;
+}
+
+main img {
+  margin: 0 auto;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+
+footer {
+  background-color: var(--footer-bgc);
+  color: var(--white);
 }

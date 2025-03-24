@@ -3,10 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Boulder</title>
   </head>
-  <body>
+  <body class="wrapper">
     <header>
       <img
         src="images/logo.svg"
@@ -15,15 +27,17 @@
         height="50"
       />
     </header>
-    <main>
+    <main class="flow">
       <h1>Discover the Thrill of Bouldering</h1>
       <img
         src="images/bouldering-gym.jpg"
         alt="Rock climbing gym with a lot of people."
-        width="800"
-        height="400"
+        width="1200"
+        height="500"
+        loading="eager"
+        fetchpriority="high"
       />
-      <article>
+      <article class="flow">
         <h2>What is Bouldering?</h2>
 
         <p>
@@ -54,7 +68,7 @@
           >
         </p>
       </article>
-      <article>
+      <article class="flow">
         <h2>Why Bouldering?</h2>
 
         <p>
@@ -65,7 +79,7 @@
 
         <h3><strong>Reasons to get started:</strong></h3>
 
-        <ul>
+        <ul class="flow" role="list">
           <li>Full-body workout</li>
           <li>Improves problem solving skills</li>
           <li>Builds mental resilience</li>
