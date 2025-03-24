@@ -75,3 +75,25 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/*  */
+
+/* Base styles for the Boulder theme */
+
+:root{
+  --ff-base: "Work Sans", serif;
+  --ff-accent: "Merriweather", serif;
+  /* font size */
+  --fs-300: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-400: clamp(1.35rem, 1.2048rem + 0.7261vw, 1.7675rem);
+  --fs-500: clamp(1.62rem, 1.3142rem + 1.5291vw, 2.4992rem);
+  --fs-600: clamp(1.944rem, 1.391rem + 2.7651vw, 3.5339rem);
+  --fs-700: clamp(2.3328rem, 1.4061rem + 4.6334vw, 4.997rem);
+  --fs-800: clamp(2.7994rem, 1.3154rem + 7.4198vw, 7.0657rem);
+
+  --tracking: -0.05ch;
+  --tracking-s: -0.075ch;
+}
+
+h1{
+  color : hsl(211, 41%, 47%);
+}
