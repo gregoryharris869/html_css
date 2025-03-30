@@ -177,4 +177,5 @@ footer {
   background-color: var(--footer-bgc);
   color: var(--white);
   text-align: center;
+  padding: 20px;
 }
