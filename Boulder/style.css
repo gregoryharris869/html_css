@@ -178,4 +178,5 @@ footer {
   color: var(--white);
   text-align: center;
   padding: 20px;
+  border: #6E84CF 1px solid;
 }
