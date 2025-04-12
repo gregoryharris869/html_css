@@ -68,8 +68,10 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-inline-size: 100%;
+  max-inline-size: 100%;  
   display: block;
+  aspect-ratio: 2/1;
+  object-fit: cover;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -186,10 +188,10 @@ blockquote:not([class]) {
   margin-top: 1em;
 }
 
-main img {
+.hero-img {
   margin: 0 auto;
-  aspect-ratio: 2/1;
-  object-fit: cover;
+  
+ 
   border-radius: .5rem;
   box-shadow: 0 0 1rem var(--grey);
 }
