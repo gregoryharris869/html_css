@@ -1,3 +1,48 @@
+:root {
+  --clr-body: hsl(180, 25%, 98%);
+  --clr-primary: hsl(217, 9%, 30%);
+  --clr-secondary: hsl(31, 100%, 39%);
+  --clr-accent: hsl(196, 62%, 37%);
+  --white: hsl(0, 0%, 100%);
+  --black: #313638;
+  --grey: hsl(0, 0%, 50%);
+  
+  /* font size */
+  --fs-300: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --fs-400: clamp(1.35rem, 1.2048rem + 0.7261vw, 1.7675rem);
+  --fs-500: clamp(1.62rem, 1.3142rem + 1.5291vw, 2.4992rem);
+  --fs-600: clamp(1.944rem, 1.391rem + 2.7651vw, 3.5339rem);
+  --fs-700: clamp(2.3328rem, 1.4061rem + 4.6334vw, 4.997rem);
+  --fs-800: clamp(2.7994rem, 1.3154rem + 7.4198vw, 7.0657rem);
+  /* space */
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vw, 09375rem);
+  --space-s: clamp(1.125rem, 1.0632rem + 0.3091vw, 1.25rem);
+  --space-m: clamp(1.6875rem, 1.5948rem + 0.4637vw, 1.875rem);
+  --space-l: clamp(2.25rem, 2.1264rem + 0.6182vw, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.1895rem + 0.9274vw, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.2527rem + 1.2365vw, 5rem);
+  --space-3xl: clamp(6.75rem, 6.3791rem + 1.8547vw, 7.5rem);
+  --space-xs-s: clamp(0.875rem, 0.6895rem + 0.9274vw, 125rem);
+  --space-s-m: clamp(1.125rem, 0.7541rem + 1.8547vw, 1875rem);
+  --space-m-l: clamp(1.6875rem, 1.2856rem + 2.0093vw, 2.5rem);
+  --space-l-xl: clamp(2.25rem, 1.5081rem + 3.7094vw, 3.75rem);
+  --space-xl-2xl: clamp(3.375rem, 2.5713rem + 4.0185vw, 5rem);
+  --space-2xl-3xl: clamp(4.5rem, 3.0162rem + 7.4189vw, 75rem);
+
+  /* fonts */
+  --ff-base: "Work Sans", serif;
+  --ff-accent: "Merriweather", serif;
+  --gutter: var(--space-s-m);
+  --border-radius: var(--size-step-1);
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 200ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+  --tracking: -0.05ch;
+  --tracking-s: -0.075ch;
+
+  --flow-space: var(--space-s);
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -68,10 +113,9 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-inline-size: 100%;  
   display: block;
-  aspect-ratio: 2/1;
-  object-fit: cover;
+  max-inline-size: 100%;  
+ 
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -93,33 +137,6 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-/*  */
-
-/* Base styles for the Boulder theme */
-
-:root {
-  --clr-body: hsl(180, 25%, 98%);
-  --clr-primary: hsl(217, 9%, 30%);
-  --clr-secondary: hsl(31, 100%, 39%);
-  --clr-accent: hsl(196, 62%, 37%);
-
-  --white: hsl(0, 0%, 100%);
-  --black: #313638;
-  --grey: hsl(0, 0%, 50%);
-  --ff-base: "Work Sans", serif;
-  --ff-accent: "Merriweather", serif;
-  /* font size */
-  --fs-300: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --fs-400: clamp(1.35rem, 1.2048rem + 0.7261vw, 1.7675rem);
-  --fs-500: clamp(1.62rem, 1.3142rem + 1.5291vw, 2.4992rem);
-  --fs-600: clamp(1.944rem, 1.391rem + 2.7651vw, 3.5339rem);
-  --fs-700: clamp(2.3328rem, 1.4061rem + 4.6334vw, 4.997rem);
-  --fs-800: clamp(2.7994rem, 1.3154rem + 7.4198vw, 7.0657rem);
-
-  --tracking: -0.05ch;
-  --tracking-s: -0.075ch;
-}
-
 body {
   font-size: var(--fs-400);
   font-family: var(--ff-base);
@@ -127,9 +144,10 @@ body {
   letter-spacing: var(--tracking-s);
   color: var(--black);
   line-height: 1.5;
+  min-height: 100vh;
 }
 
-header img {
+.logo {
   margin: 0 auto;
 }
 
@@ -138,8 +156,8 @@ h2,
 h3 {
   letter-spacing: var(--tracking-s);
   line-height: 1.1;
-  font-family: var(--ff-base);
-  max-width: 20ch;
+  
+  
 }
 
 h1 {
@@ -158,7 +176,7 @@ h3 {
   color: var(--clr-secondary);
 }
 
-blockquote:not([class]),
+
 li,
 p {
   max-width: 65ch;
@@ -174,9 +192,8 @@ a:active {
   color: var(--black);
 }
 
-blockquote:not([class]) {
-  font-family: var(--ff-accent);
-  font-size: var(--fs-300);
+[role="list"] {
+  padding: 0;
 }
 
 .wrapper {
@@ -184,14 +201,21 @@ blockquote:not([class]) {
   margin-inline: auto;
 }
 
+
+
 .flow > * + * {
-  margin-top: 1em;
+  margin-top: var(--flow-space, 1em); 
 }
 
-.hero-img {
+.region {
+  padding-bottom: var(--region-space, var(--space-l-xl));
+  padding-top: var(--region-space, var(--space-l-xl));
+}
+
+.hero-imgs {
+  aspect-ratio: 2/1;
   margin: 0 auto;
-  
- 
+  object-fit: cover;
   border-radius: .5rem;
   box-shadow: 0 0 1rem var(--grey);
 }
@@ -218,7 +242,7 @@ blockquote:not([class]) {
   background-size: cover;
   background-position: center;
   color: var(--white);
-  padding: 3rem;
+  
   border-radius: .5rem;
   box-shadow: 0 0 1rem var(--grey);
 }
