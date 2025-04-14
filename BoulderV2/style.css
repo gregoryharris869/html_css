@@ -115,6 +115,7 @@ img,
 picture {
   display: block;
   max-inline-size: 100%;  
+  
  
 }
 
@@ -213,11 +214,14 @@ a:active {
 }
 
 .hero-imgs {
-  
-  margin: 0 auto;
+  display: block;
+  max-inline-size: 100%;
+    
   object-fit: cover;
   border-radius: .5rem;
+  object-position: center;
   box-shadow: 0 0 1rem var(--grey);
+ 
 }
 
 .accent {
@@ -262,9 +266,10 @@ a:active {
     var(--grid-placement, auto-fill),
     minmax(var(--grid-min-item-size, 16rem), 1fr)
   );
-  align-items: start;
+ 
+  
 }
-
+  
 footer {
   text-align: center;
 }
