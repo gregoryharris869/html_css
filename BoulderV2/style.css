@@ -208,12 +208,12 @@ a:active {
 }
 
 .region {
-  padding-bottom: var(--region-space, var(--space-l-xl));
-  padding-top: var(--region-space, var(--space-l-xl));
+  padding-bottom: var(--region-space, var(--space-m-l));
+  padding-top: var(--region-space, var(--space-m-l));
 }
 
 .hero-imgs {
-  aspect-ratio: 2/1;
+  
   margin: 0 auto;
   object-fit: cover;
   border-radius: .5rem;
@@ -245,6 +245,24 @@ a:active {
   
   border-radius: .5rem;
   box-shadow: 0 0 1rem var(--grey);
+}
+
+.features {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 33%, 20rem);
+  --gutter: var(--space-l-xl);
+  --flow-space: var(--space-s);
+  
+}
+
+.grid {
+  display: grid;
+  gap: var(--gutter, var(--space-s-l));
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill),
+    minmax(var(--grid-min-item-size, 16rem), 1fr)
+  );
+  align-items: start;
 }
 
 footer {
