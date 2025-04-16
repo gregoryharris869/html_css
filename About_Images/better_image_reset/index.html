@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/low-res-trees.jpg"
+      fetchpriority="high"
+    />
     <title>Example</title>
   </head>
   <body>
@@ -13,7 +19,15 @@
         <h1>Some new defaults for your image elements.</h1>
       </header>
       <h2>Here you can add more information about image handling.</h2>
-      <img src="example.jpg" width="900" height="400" alt="Example Image" />
+      <section>
+        <img
+          src="images/trees.jpg"
+          style="background-image: url(images/low-res-trees.jpg)"
+          width="900"
+          height="400"
+          alt="Pine trees in the mist."
+        />
+      </section>
       <article class="flow">
         <p>Make sure to optimize your images for better performance.</p>
         <p>
@@ -21,7 +35,7 @@
           compression.
         </p>
       </article>
-      <article>
+      <article class="flow">
         <p>
           Utilize responsive design techniques to ensure images look great on
           all devices.
@@ -31,8 +45,12 @@
           Use descriptive alt text for better accessibility and SEO. Consider
           using a content delivery network (CDN) for faster image delivery.
         </p>
+        <p>
+          Regularly review and update your images to keep your content fresh and
+          engaging.
+        </p>
       </article>
-      <article>
+      <article class="flow">
         <p>
           Test your images across different browsers and devices for
           compatibility. Regularly audit your images to ensure they are
@@ -42,6 +60,10 @@
         <p>
           Monitor your website's performance and make adjustments as needed to
           optimize image loading.
+        </p>
+        <p>
+          Stay informed about the latest trends and best practices in web design
+          to keep your images looking fresh and engaging.
         </p>
       </article>
       <footer>

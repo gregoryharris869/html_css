@@ -88,8 +88,16 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
+  /* max-width: 100%;
+  display: block; */
   max-width: 100%;
-  display: block;
+  vertical-align: middle;
+  height: auto;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -119,12 +127,10 @@ body {
 }
 
 .wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--wrapper-max-width, 85rem);
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-  position: relative;
+ 
+  width: min(100% - 3rem, 55ch);
+  margin-inline: auto;
+
 }
 
 h1,
@@ -163,4 +169,8 @@ h3 {
 .region {
   padding-bottom: var(--region-space, var(--space-l-2xl));
   padding-top: var(--region-space, var(--space-l-2xl));
+}
+
+footer {
+  text-align: center;
 }
