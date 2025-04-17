@@ -114,7 +114,12 @@ a:not([class]) {
 img,
 picture {
   display: block;
-  max-inline-size: 100%;  
+  max-inline-size: 100%;
+  height: auto;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;  
   
  
 }
@@ -214,15 +219,11 @@ a:active {
 }
 
 .hero-imgs {
-  display: block;
-  max-inline-size: 100%;
-    
   object-fit: cover;
   border-radius: .5rem;
   object-position: center;
   box-shadow: 0 0 1rem var(--grey);
- 
-}
+ }
 
 .accent {
   color: var(--clr-accent);
