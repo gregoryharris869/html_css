@@ -76,8 +76,7 @@ dd {
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
 ol[role="list"] {
-  list-style:square;
-  list-style-position: inside;
+  list-style: none;
 
 }
 
@@ -153,9 +152,7 @@ body {
   min-height: 100vh;
 }
 
-.logo {
-  margin: 0 auto;
-}
+
 
 h1,
 h2,
@@ -200,6 +197,7 @@ a:active {
 
 [role="list"] {
   padding: 0;
+  margin: 0;
 }
 
 .wrapper {
@@ -207,6 +205,23 @@ a:active {
   margin-inline: auto;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+
+.nav-links ul {
+  display: flex;
+  gap: var(--space-s);
+  }
+
+  .nav-links a {
+    
+    text-decoration: none;
+  
+  }
 
 
 .flow > * + * {

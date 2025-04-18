@@ -20,14 +20,26 @@
   </head>
   <body>
     <main class="wrapper flow">
-      <header>
-        <img
-          src="images/logo.svg"
-          alt="boulder logo inc."
-          width="150"
-          height="50"
-          class="logo"
-        />
+      <header class="region">
+        <a href="index.html"
+          ><img
+            src="images/logo.svg"
+            alt="boulder logo inc."
+            width="150"
+            height="50"
+            class="logo"
+        /></a>
+
+        <nav class="nav-links" aria-label="primary navigation">
+          <ul role="list">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="gettingStarted.html">Getting Started</a>
+            </li>
+          </ul>
+        </nav>
       </header>
       <section class="region flow">
         <h1>Discover the Thrill of <span class="accent">Bouldering</span></h1>
@@ -35,8 +47,8 @@
         <img
           src="images/bouldering-gym.jpg"
           alt="Rock climbing gym with a lot of people."
-          width="1000"
-          height="700"
+          width="1200"
+          height="900"
           loading="eager"
           fetchpriority="high"
           class="hero-imgs"
