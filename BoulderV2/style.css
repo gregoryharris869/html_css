@@ -218,10 +218,8 @@ header {
   }
 
   .nav-links a {
-    
     text-decoration: none;
-  
-  }
+}
 
 
 .flow > * + * {
@@ -238,6 +236,8 @@ header {
   border-radius: .5rem;
   object-position: center;
   box-shadow: 0 0 1rem var(--grey);
+  
+  
  }
 
 .accent {
@@ -267,23 +267,13 @@ header {
   box-shadow: 0 0 1rem var(--grey);
 }
 
-.features {
-  --grid-placement: auto-fit;
-  --grid-min-item-size: clamp(16rem, 33%, 20rem);
-  --gutter: var(--space-l-xl);
-  --flow-space: var(--space-s);
+.flex {
+  display: flex;
+  gap: var(--space-s);
+  flex-direction: row;
+  align-items: center;
   
-}
-
-.grid {
-  display: grid;
-  gap: var(--gutter, var(--space-s-l));
-  grid-template-columns: repeat(
-    var(--grid-placement, auto-fill),
-    minmax(var(--grid-min-item-size, 16rem), 1fr)
-  );
- 
-  
+  justify-content: space-between;
 }
   
 footer {
