@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #4b4453;
+}
+
+.wrapper {
+ 
+  width: min(100% - 3rem, 55ch);
+  margin-inline: auto;
+
+}
+
+img,
+picture {
+  
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+
+}
+
+.profile_pic_figure {
+  
+}
